@@ -1,0 +1,17 @@
+#div-container{
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.grid-item{
+    padding: 5px;
+    width: 15px;
+    height: 15px;
+    background-color: aquamarine;
+    margin: 1px;
+    display: inline-block;
+}
