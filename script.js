@@ -1,5 +1,5 @@
 let board = document.querySelector(".board");
-let blackButton = document.querySelector(".btn-black");
+let blackButton = document.querySelector(".btn-dark");
 let randomButton = document.querySelector(".btn-warning");
 let resetButton = document.querySelector(".btn-info");
 
@@ -7,14 +7,21 @@ blackButton.addEventListener('click', () => setColor('black'));
 randomButton.addEventListener('click', () => setColor('random'));
 resetButton.addEventListener('click', resetGrid);
 
+// Set default size to 16 and create grid
+createGrid(16);
+
 function askForSize() {
     let size = prompt("Please enter the size (default is 16):");
 
     if (size !== null && size !== "") {
-        createGrid(size);
-    } else if (size > 64) {
-        alert("The number should be below or equal to 64!");
+        size = parseInt(size);
+        if (size > 64) {
+            alert("The number should be below or equal to 64!");
+        } else {
+            createGrid(size);
+        }
     } else {
+        // If no size is provided, use default size (16)
         createGrid(16);
     }
 }

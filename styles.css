@@ -23,17 +23,16 @@ body{
     margin-top: 20px;  
 }
 
-.board{
+.board {
     width: 500px;
     height: 500px;
     display: grid;
-    border: 1px solid black;
-
+    border: 1px solid black; /* Keep the border for the appearance of a canvas */
 }
 
-.cell{
+.cell {
     width: 30px;
     height: 30px;
     background-color: white;
-    border: 1px solid black;
+    border: none; /* Remove borders between cells */
 }
